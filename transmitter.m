@@ -13,7 +13,7 @@
     codes(codes==-1)=0
     data_ex1 = data(1)*ones(1,length(codes(1,:)));
     data_ex2 = data(2)*ones(1,length(codes(1,:)));
-    transignal1 = xor(data_ex2,codes(2,:));
+    transignal1 = xor(data_ex1,codes(2,:));
     transignal2 = xor(data_ex2,codes(2,:));
     tran11 = double(transignal1);
     tran21 = double(transignal2);
