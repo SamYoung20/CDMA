@@ -7,7 +7,7 @@
 % 4. Spread the data by multiplying s by cn.
 % 6. Outpot of the function is spread symbol of user cn.
 %%
-function [sum_sig, user_codes] = transmitter_clean(data, num_users)
+function [sig_sum, user_codes] = transmitter_clean(data, num_users)
     %INPUTS:
     %data: a matrix of the data you want to transmit where each row is a different user
     %num_users: integar of number of users the number of users that 
