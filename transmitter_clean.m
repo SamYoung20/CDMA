@@ -52,8 +52,7 @@ function [sum_sig, user_codes] = transmitter_clean(data, num_users)
          word=[]
     end
    %sum all of the users 
-   sig = sum(spread_sig)
-   users = [2, 3]
+   sig_sum = sum(spread_sig)
    user_codes = codes
 end  
    
