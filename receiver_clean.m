@@ -1,6 +1,6 @@
-%% Code Division Multiple Access Transmitter
+%% Code Division Multiple Access Receiver
 % CDMA - Function
-% 1. Input data from transmitter and hadamard matrix used for transmitter
+% 1. Input data from transmitter and hadamard matrix used from transmitter
 % 2. Sum data for the size of each bit. Multiply by each bit in the
 % spreading code
 % 3. Divide each bit sum by the number of chips in each bit
