@@ -53,6 +53,6 @@ function [sum_sig, user_codes] = transmitter_clean(data, num_users)
     end
    %sum all of the users 
    sig_sum = sum(spread_sig)
-   user_codes = codes
+   user_codes = codes(1:users,:)
 end  
    
