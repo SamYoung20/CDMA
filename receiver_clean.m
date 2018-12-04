@@ -28,6 +28,15 @@ function decoded_signal= receiver_clean(sent_sig, spread_codes)
         end
         currbit=1; %reset currbit for next signal
     end  
+    for i=1:size(decoded_signal,1)
+        j=1:size(decoded_signal,2)
+           if(decoded_signal(i,j)<0)
+               decoded_signal(i,j)=-1;
+           elseif(decoded_signal(i,j)>0)
+               decoded_signal(i,j)=1;
+           end
+    end
+    
     decoded_signal(decoded_signal==1)=0;
     decoded_signal(decoded_signal==-1)=1;
 end
