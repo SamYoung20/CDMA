@@ -1,0 +1,22 @@
+data_length = 100;
+num_users = 64;
+sampling = 3;
+users = 1:10;
+spread_sig = sum(spread_sig)
+sprerepelem(sum(spread_sig),3);
+
+[spread_sig, user_code, data_mat] = transmitter_submodule(data_length,num_users,users);
+data_sig = repelem(data_mat(1,:),1,64);
+figure(1)
+subplot(2,1,1)
+stairs(data_sig)
+subplot(2,1,2)
+fs = data_length*num_users*sampling;
+f = fs/2*linspace(-1,1,fs);
+plot(f,abs(fftshift(fft(data_sig))));
+
+figure(2)
+subplot(2,1,1)
+stairs(spread_sig);
+subplot(2,1,2)
+plot(f,abs(fftshift(fft(spread_sig))));
